@@ -24,8 +24,8 @@ main {
     width: 100%; /* Ensures the header spans the full width */
     background-color: #020f18; /* Background color */
     color: white; /* Text color */
-    padding: 10px; /* Adds space inside the header */
     height: 90px; /* Set the height of the header */
+    padding: 10px; /* Adds space inside the header */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
     z-index: 999; /* Keeps the header above other elements */
   }
@@ -114,11 +114,10 @@ footer {
     font-size: 16px;
   }
   
-  .nav-button:hover {
-    background-color: #1f6391;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  .nav-box:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
   }
-
 
 /* Dropdown Styling */
 .dropdown {
@@ -126,13 +125,11 @@ footer {
     display: inline-block;
   }
   
-  .dropbtn {
-    background: none; /* Dropdown button inherits nav-button styles */
-  }
+
   
   /* Dropdown Menu */
-  display: none; /* Hidden by default */
   .dropdown-content {
+    display: none; /* Hidden by default */
     position: absolute;
     background-color: white;
     min-width: 150px;
@@ -144,14 +141,14 @@ footer {
   
   .dropdown-content li {
     list-style-type: none;
-    border-bottom: 1px solid #ddd;
   }
   
-  .dropdown-content li:last-child {
-    border-bottom: none;
+/* Dropdown Items */
+.dropdown-content li {
+    list-style: none;
   }
   
-  .dropdown-content a {
+  .dropdown-content li a {
     color: #333;
     text-decoration: none;
     padding: 10px;
