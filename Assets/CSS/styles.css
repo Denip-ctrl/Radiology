@@ -123,6 +123,10 @@ footer {
 .dropdown {
     position: relative;
     display: inline-block;
+    background-color: transparent; /* Prevent background on parent */
+    box-shadow: none; /* Prevent shadow on parent */
+    padding: 0;
+    margin: 0;
   }
   
 
