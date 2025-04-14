@@ -131,28 +131,25 @@ footer {
   .dropdown-content {
     display: none; /* Hidden by default */
     position: absolute;
-    background-color: white;
+    background-color: transparent;
     min-width: 150px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    box-shadow: none;
+    border-radius: 0;
     padding: 0;
     z-index: 1000;
   }
   
-  .dropdown-content li {
-    list-style-type: none;
-  }
-  
+
 /* Dropdown Items */
 .dropdown-content li {
     list-style: none;
   }
   
   .dropdown-content li a {
+    display: block;
+    padding: 10px;
     color: #333;
     text-decoration: none;
-    padding: 10px;
-    display: block;
     font-size: 14px;
   }
   
