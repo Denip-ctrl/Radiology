@@ -1,0 +1,153 @@
+/* Set the background color for all pages */
+header h1 {
+    margin-bottom: 80px; /* Add spacing below the title */
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../Image/Background ChatGPT Image Apr 12 2025 075153 PM.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+main {
+    margin-top: 90px; /* Matches the height of the fixed header */
+    padding: 20px; /* Adds padding to content */
+  }
+
+/* Header styling */
+.fixed-header {
+    position: fixed; /* Fixes the header at the top */
+    top: 0; /* Aligns it to the top */
+    left: 0; /* Aligns it to the left */
+    width: 100%; /* Ensures the header spans the full width */
+    background-color: #020f18; /* Background color */
+    color: white; /* Text color */
+    padding: 10px; /* Adds space inside the header */
+    height: 90px; /* Set the height of the header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+    z-index: 999; /* Keeps the header above other elements */
+  }
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styles */
+section {
+    padding: 20px;
+    color: #333;
+}
+
+section h2 {
+    color: #f7f6f6;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+/* Styling for the navigation container */
+.nav-container {
+    display: flex; /* Displays navigation items in a row */
+    gap: 20px; /* Space between navigation boxes */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Align vertically */
+    margin: 20px; /* Margin around the nav container */
+  }
+  
+  /* Styling for individual navigation boxes */
+  .nav-box {
+    padding: 10px 20px; /* Adds space inside the box */
+    background-color: #3498db; /* Box color */
+    color: white; /* Text color */
+    text-decoration: none; /* Removes underline from links */
+    border-radius: 10px; /* Makes corners rounded */
+    border: 2px solid #2980b9; /* Border around the box */
+    font-family: Arial, sans-serif; /* Font style */
+    font-size: 16px; /* Font size */
+    text-align: center; /* Centers text inside the box */
+    display: inline-block; /* Keeps the box layout intact */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+    transition: background-color 0.3s, transform 0.2s; /* Animates hover effects */
+  }
+  
+  /* Hover effect for navigation boxes */
+  .nav-box:hover {
+    background-color: #2980b9; /* Changes box color on hover */
+    transform: scale(1.05); /* Slightly enlarges the box */
+  }
+  
+/* Container to center groups and control margins */
+.tentangkami {
+    max-width: 800px; /* Limit the width of the content */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add padding around the container */
+  }
+
+/* Group styling */
+.kel-tk {
+    background-color: rgba(52, 152, 219, 0.8); /* Semi-transparent background */
+    padding: 20px; /* Padding inside each group */
+    margin-bottom: 20px; /* Space between groups */
+    border-radius: 10px; /* Rounded corners */
+    color: white; /* Text color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  }
+
+/* Add spacing with text "Peralatan Rumah Sakit" */
+.spade-text {
+    display: block;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+}
+/* Center the title in the header */
+header h1 {
+    text-align: center;
+    margin: 0;
+}
+
+/* Make navigation choices horizontal */
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+body {
+    background-color: #bcd7f1; /* Hospital blue */
+}
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;    color: white;
+}

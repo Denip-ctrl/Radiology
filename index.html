@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Health Equipment</title>
+    <link rel="stylesheet" href="Assets/CSS/styles.css">
+    
+</head>
+<body>
+    
+
+    <div id="header"></div>
+    <script>
+      fetch('header.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('header').innerHTML = html);
+    </script>
+    <main>
+        <div class="tentangkami">
+            <section id="home" class="kel-tk">
+                <h2>Welcome to Our Health Equipment Store</h2>
+                <p>Providing top-quality medical equipment for hospitals and healthcare facilities.</p>
+            </section>
+        </div>
+    </main>
+
+    
+    <footer>
+        <p>&copy; 2023 Hospital Health Equipment. All rights reserved.</p>
+    </footer>
+</body>
+</html>
