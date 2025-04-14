@@ -113,8 +113,8 @@ footer {
   }
   
   /* Dropdown Menu */
+  display: none; /* Hidden by default */
   .dropdown-content {
-    display: none; /* Hidden by default */
     position: absolute;
     background-color: white;
     min-width: 150px;
@@ -149,7 +149,7 @@ footer {
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  
+
 /* Container to center groups and control margins */
 .tentangkami {
     max-width: 800px; /* Limit the width of the content */
