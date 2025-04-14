@@ -1,6 +1,6 @@
 /* Set the background color for all pages */
 header h1 {
-    margin-bottom: 80px; /* Add spacing below the title */
+    margin-bottom: 100px; /* Add spacing below the title */
 }
 body {
     margin: 0;
@@ -12,7 +12,7 @@ body {
 }
 
 main {
-    margin-top: 90px; /* Matches the height of the fixed header */
+    margin-top: 100px; /* Matches the height of the fixed header */
     padding: 20px; /* Adds padding to content */
   }
 
