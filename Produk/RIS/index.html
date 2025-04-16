@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Assets/CSS/styles.css">
+    <link rel="stylesheet" href="/Radiology/Assets/CSS/styles.css">
     <title>Sistem Informasi Radiology</title>
 </head>
 <body>
+    <div id="header"></div>
+    <script>
+      fetch('/Radiology/header.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('header').innerHTML = html);
+    </script>
     <main>
         <h1>Sistem Informasi Radiology</h1>
         <p>Sistem Informasi Manajemen yang terkomputerisasi, yang didesain untuk menangkap, menyimpan, dan menampilkan gambar medis
