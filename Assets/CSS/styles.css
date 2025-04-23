@@ -215,3 +215,37 @@ header h1 {
     text-align: center;
     margin: 0;    color: white;
 }
+
+/* Specific Styling for RIS Page */
+
+/* Main Content Layout for RIS Page */
+.ris-content {
+    display: flex; /* Enable Flexbox */
+    justify-content: space-between; /* Space out the two columns */
+    gap: 30px; /* Add spacing between columns */
+    margin-top: 50px;
+}
+
+.left-column, .right-column {
+    flex: 1; /* Make both columns take equal width */
+    max-width: 45%; /* Ensure they don't exceed 50% each */
+}
+
+.right-column img {
+    width: fit-content; /* Make the image responsive */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    margin-bottom: 50px;
+}
+
+.left-column h1 {
+    font-size: 3rem; /* Adjust size to make the title bigger */
+    color: rgb(50, 33, 112); /* Text color to white */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow for better readability */
+}
+
+.left-column p {
+    font-size: 1.5rem; /* Make the paragraph text larger */
+    color: white; /* Change text color to white */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Optional: Shadow for readability */
+}
