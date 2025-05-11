@@ -220,32 +220,56 @@ header h1 {
 
 /* Main Content Layout for RIS Page */
 .ris-content {
-    display: flex; /* Enable Flexbox */
-    justify-content: space-between; /* Space out the two columns */
-    gap: 30px; /* Add spacing between columns */
-    margin-top: 50px;
+  display: flex; /* Enable Flexbox */
+  justify-content: space-between; /* Space out the two columns */
+  gap: 30px; /* Add spacing between columns */
+  margin-top: 50px;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
+/* Ensure columns adjust dynamically */
 .left-column, .right-column {
-    flex: 1; /* Make both columns take equal width */
-    max-width: 45%; /* Ensure they don't exceed 50% each */
+  flex: 1; /* Make both columns take equal width */
+  max-width: 45%; /* Ensure they don't exceed 45% each */
 }
 
+/* Make images fully responsive */
 .right-column img {
-    width: fit-content; /* Make the image responsive */
-    height: auto; /* Maintain the aspect ratio */
-    border-radius: 5px; /* Optional: Add rounded corners */
-    margin-bottom: 50px;
+  max-width: 100%; /* Ensure image scales within its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  margin-bottom: 50px;
 }
 
+/* Improve text responsiveness */
 .left-column h1 {
-    font-size: 3rem; /* Adjust size to make the title bigger */
-    color: rgb(50, 33, 112); /* Text color to white */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow for better readability */
+  font-size: 3vw; /* Use viewport width for better scaling */
+  color: rgb(50, 33, 112); /* Text color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow */
 }
 
 .left-column p {
-    font-size: 1.5rem; /* Make the paragraph text larger */
-    color: white; /* Change text color to white */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Optional: Shadow for readability */
+  font-size: 1.5vw; /* Use viewport width for better scaling */
+  color: white; /* Change text color */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Optional: Shadow */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .ris-content {
+      flex-direction: column; /* Stack columns vertically */
+      align-items: center; /* Center content */
+  }
+
+  .left-column, .right-column {
+      max-width: 100%; /* Make columns full width */
+  }
+
+  .left-column h1 {
+      font-size: 4vw; /* Adjust font size */
+  }
+
+  .left-column p {
+      font-size: 2vw; /* Adjust font size */
+  }
 }
