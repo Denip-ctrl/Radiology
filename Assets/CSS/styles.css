@@ -18,7 +18,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.3; /* Adjust transparency */
+  opacity: 0.7; /* Adjust transparency */
   z-index: -1; /* Sends it behind all content */
 }
 
@@ -234,22 +234,30 @@ header h1 {
   display: flex; /* Enable Flexbox */
   justify-content: space-between; /* Space out the two columns */
   gap: 30px; /* Add spacing between columns */
-  margin-top: 50px;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  flex-wrap: nowrap; /* Allow wrapping for smaller screens */
+  align-items: flex-start; /* Align columns at the top */
 }
 
 /* Ensure columns adjust dynamically */
-.left-column, .right-column {
+.left-column {
   flex: 1; /* Make both columns take equal width */
   max-width: 45%; /* Ensure they don't exceed 45% each */
 }
 
+.right-column {
+  display: flex; /* Ensure images stay inside */
+  flex-direction: column; /* Stack images properly */
+  justify-content: flex-start; /* aligned content at the top */
+}
+
+
 /* Make images fully responsive */
 .right-column img {
-  max-width: 100%; /* Ensure image scales within its container */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 5px; /* Optional: Add rounded corners */
-  margin-bottom: 50px;
+  margin-top: 50px; /* Adjust spacing as needed */
+  width: 80%; /* Full width of the column */
+  max-width: 300px/* Set relative size */
+  height: auto; /* Keep proportions */
+  margin-left: 20px; /* Add left margin for spacing */
 }
 
 /* Improve text responsiveness */
