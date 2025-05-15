@@ -1,53 +1,93 @@
-/* Set the background color for all pages */
-header h1 {
-    margin-bottom: 100px; /* Add spacing below the title */
-}
+/* Set background color */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #bcd7f1; /* Hospital blue */
+}
+
+/* Group styling */ .kel-tk { 
+  background-color: rgba(52, 152, 219, 0.8); /* Semi-transparent background */ 
+  padding: 20px; /* Padding inside each group */ 
+  margin-bottom: 20px; /* Space between groups */ 
+  border-radius: 10px; /* Rounded corners */ color: white; /* Text color */ 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */ 
+  width: 60%; /* Adjust the width to make it smaller */
+  max-width: 700px; /* Prevent it from getting too large on bigger screens */
+  margin: 20px auto; /* Centers the box horizontally */
+}
+
+.left-column {
+  background-color: rgba(52, 152, 219, 0.8); /* Same semi-transparent background */
+  padding: 20px; /* Consistent padding */
+  border-radius: 10px; /* Uniform rounded corners */
+  color: white; /* Match text color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Same subtle shadow */
 }
 
 /* Background Overlay */
 .background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Image/Background ChatGPT Image Apr 12 2025 075153 PM.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+/* Header Styling */
+header h1 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+/* Fixed Header */
+.fixed-header {
+  display: flex;
+  align-items: center; /* Vertically centers content */
+  justify-content: center; /* Horizontally centers everything */
+  flex-direction: column; /* Stacks elements */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-image: url('../Image/Background ChatGPT Image Apr 12 2025 075153 PM.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.7; /* Adjust transparency */
-  z-index: -1; /* Sends it behind all content */
+  background-color: #020f18;
+  color: white;
+  height: 90px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
 }
 
-main {
-    margin-top: 100px; /* Matches the height of the fixed header */
-    padding: 20px; /* Adds padding to content */
-  }
+/* Center the navigation */
+.nav-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  gap: 20px; /* Add space between buttons */
+}
 
-/* Header styling */
-.fixed-header {
-    position: fixed; /* Fixes the header at the top */
-    top: 0; /* Aligns it to the top */
-    left: 0; /* Aligns it to the left */
-    width: 100%; /* Ensures the header spans the full width */
-    background-color: #020f18; /* Background color */
-    color: white; /* Text color */
-    height: 90px; /* Set the height of the header */
-    padding: 10px; /* Adds space inside the header */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
-    z-index: 999; /* Keeps the header above other elements */
-  }
+
+/* Main Content */
+main {
+    margin-top: 100px;
+    padding: 20px;
+}
 
 /* Navigation Styles */
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 nav ul li {
@@ -64,7 +104,7 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Section Styles */
+/* Section Styling */
 section {
     padding: 20px;
     color: #333;
@@ -74,7 +114,13 @@ section h2 {
     color: #f7f6f6;
 }
 
-/* Footer Styles */
+.kel-tk li, .kel-tk p {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 1.5vw;
+}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 10px;
@@ -82,213 +128,114 @@ footer {
     color: white;
 }
 
-/* Styling for the navigation container */
-.nav-container {
-    display: flex; /* Displays navigation items in a row */
-    gap: 20px; /* Space between navigation boxes */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Align vertically */
-    margin: 20px; /* Margin around the nav container */
-  }
-  
-  /* Styling for individual navigation boxes */
-  .nav-box {
-    padding: 10px 20px; /* Adds space inside the box */
-    background-color: #3498db; /* Box color */
-    color: white; /* Text color */
-    text-decoration: none; /* Removes underline from links */
-    border-radius: 10px; /* Makes corners rounded */
-    border: 2px solid #2980b9; /* Border around the box */
-    font-family: Arial, sans-serif; /* Font style */
-    font-size: 16px; /* Font size */
-    text-align: center; /* Centers text inside the box */
-    display: inline-block; /* Keeps the box layout intact */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
-    transition: background-color 0.3s, transform 0.2s; /* Animates hover effects */
-  }
-  
-  /* Hover effect for navigation boxes */
-  .nav-box:hover {
-    background-color: #2980b9; /* Changes box color on hover */
-    transform: scale(1.05); /* Slightly enlarges the box */
-  }
-  
-  .nav-button {
+/* Navigation Box */
+.nav-box {
     padding: 10px 20px;
-    background-color: #2980b9;
+    background-color: #3498db;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    border: none;
-    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid #2980b9;
+    font-family: Arial, sans-serif;
     font-size: 16px;
-  }
-  
-  .nav-box:hover {
+    text-align: center;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover Effect */
+.nav-box:hover {
     background-color: #2980b9;
     transform: scale(1.05);
-  }
+}
 
-/* Dropdown Styling */
+/* Dropdown */
 .dropdown {
     position: relative;
     display: inline-block;
-    background-color: transparent; /* Prevent background on parent */
-    box-shadow: none; /* Prevent shadow on parent */
-    padding: 0;
-    margin: 0;
-  }
-  
+}
 
-  
-  /* Dropdown Menu */
-  .dropdown-content {
-    display: none; /* Hidden by default */
+.dropdown-content {
+    display: none;
     position: absolute;
-    background-color: transparent;
     min-width: 150px;
-    box-shadow: none;
-    border-radius: 0;
-    padding: 0;
     z-index: 1000;
-  }
-  
+}
 
-/* Dropdown Items */
 .dropdown-content li {
     list-style: none;
-  }
-  
-  .dropdown-content li a {
+}
+
+.dropdown-content li a {
     display: block;
     padding: 10px;
     color: #333;
     text-decoration: none;
     font-size: 14px;
-  }
-  
-  .dropdown-content a:hover {
+}
+
+.dropdown-content a:hover {
     background-color: #f1f1f1;
-  }
-  
-  /* Show Dropdown Menu on Hover */
-  .dropdown:hover .dropdown-content {
+}
+
+.dropdown:hover .dropdown-content {
     display: block;
-  }
-
-/* Container to center groups and control margins */
-.tentangkami {
-    max-width: 800px; /* Limit the width of the content */
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 20px; /* Add padding around the container */
-  }
-
-/* Group styling */
-.kel-tk {
-    background-color: rgba(52, 152, 219, 0.8); /* Semi-transparent background */
-    padding: 20px; /* Padding inside each group */
-    margin-bottom: 20px; /* Space between groups */
-    border-radius: 10px; /* Rounded corners */
-    color: white; /* Text color */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
-  }
-
-/* Add spacing with text "Peralatan Rumah Sakit" */
-.spade-text {
-    display: block;
-    margin: 20px 0;
-    text-align: center;
-    font-size: 1.2em;
-    color: #333;
-}
-/* Center the title in the header */
-header h1 {
-    text-align: center;
-    margin: 0;
 }
 
-/* Make navigation choices horizontal */
-nav ul {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-body {
-    background-color: #bcd7f1; /* Hospital blue */
-}
-header h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 2.5em;
-    font-weight: bold;
-    text-align: center;
-    margin: 0;    color: white;
-}
-
-/* Specific Styling for RIS Page */
-
-/* Main Content Layout for RIS Page */
+/* RIS Page Layout */
 .ris-content {
-  display: flex; /* Enable Flexbox */
-  justify-content: space-between; /* Space out the two columns */
-  gap: 30px; /* Add spacing between columns */
-  flex-wrap: nowrap; /* Allow wrapping for smaller screens */
-  align-items: flex-start; /* Align columns at the top */
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: nowrap;
+    align-items: flex-start;
 }
 
-/* Ensure columns adjust dynamically */
 .left-column {
-  flex: 1; /* Make both columns take equal width */
-  max-width: 45%; /* Ensure they don't exceed 45% each */
+    flex: 1;
+    max-width: 45%;
 }
 
 .right-column {
-  display: flex; /* Ensure images stay inside */
-  flex-direction: column; /* Stack images properly */
-  justify-content: flex-start; /* aligned content at the top */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-
-/* Make images fully responsive */
+/* Responsive Images */
 .right-column img {
-  margin-top: 50px; /* Adjust spacing as needed */
-  width: 80%; /* Full width of the column */
-  max-width: 300px/* Set relative size */
-  height: auto; /* Keep proportions */
-  margin-left: 20px; /* Add left margin for spacing */
+    margin-top: 0px;
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    margin-left: 20px;
 }
 
-/* Improve text responsiveness */
+/* Improve Text Responsiveness */
 .left-column h1 {
-  font-size: 3vw; /* Use viewport width for better scaling */
-  color: rgb(50, 33, 112); /* Text color */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.left-column p {
-  font-size: 1.5vw; /* Use viewport width for better scaling */
-  color: white; /* Change text color */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Optional: Shadow */
+.left-column h1 {
+    font-size: 2vw;
+    color: rgb(252, 251, 253);
 }
 
-/* Responsive adjustments for smaller screens */
+.left-column p, li {
+    font-size: 1.5vw;
+    color: white;
+}
+
+/* Responsive Adjustments */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .ris-content {
-      flex-direction: column; /* Stack columns vertically */
-      align-items: center; /* Center content */
-  }
-
-  .left-column, .right-column {
-      max-width: 100%; /* Make columns full width */
-  }
-
-  .left-column h1 {
-      font-size: 4vw; /* Adjust font size */
-  }
-
-  .left-column p {
-      font-size: 2vw; /* Adjust font size */
-  }
+    .ris-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-column, .right-column {
+        max-width: 100%; /* Make columns full width */
+        text-align: center; /* Adjust content alignment */
+    }
 }
